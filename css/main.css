@@ -1,0 +1,73 @@
+
+
+
+
+
+
+#canvas {
+    display: grid;
+    width: calc(100% - 30px);
+    height: 950px;
+    grid-template-areas: "head head head"
+    "nav  main aside"
+    "nav  foot foot";
+    grid-template-rows: 100px 1fr 150px;
+    grid-template-columns: 300px auto 300px;
+    grid-gap: 15px;
+    padding: 0 15px;
+}
+
+#canvas > header {
+    grid-area: head;
+}
+#canvas > header > a > img {
+    width: 200px;
+    margin-left: calc(50% - 100px);
+}
+
+#canvas > nav {
+    grid-area: nav;
+    width: 300px;
+    z-index: 1;
+    overflow-x: hidden;
+}
+#canvas > nav > a{
+
+    text-decoration: none;
+    font-size: 24px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+#canvas > nav > a:hover{
+    color: blue;
+}
+
+#canvas > main {
+    grid-area: main;
+    background-color: #ffff64;
+}
+
+#canvas > aside {
+    grid-area: aside;
+}
+
+#canvas > footer {
+    grid-area: foot;
+    background-color: #8cffa0;
+
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+}
+.box{
+    -webkit-box-shadow: 3px 0px 6px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 3px 0px 6px 0px rgba(0,0,0,0.16);
+    box-shadow: 3px 0px 6px 0px rgba(0,0,0,0.16);
+    margin-bottom: 10px;
+    padding: 5px;
+}
