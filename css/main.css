@@ -1,20 +1,149 @@
+/*
+Setting our main colors for later use.*/
+
+:root {
+  --green: rgb(131, 173, 101); 
+  --orange: rgb(245, 153, 74); 
+  --blue: rgb(131, 151, 230);
+  --red: rgb(245, 111, 111);
+  --black: rgb(0, 0, 0);
+  --grey-50: rgb(127, 127, 127);
+  --grey-25: rgb(191, 191, 191);
+  --yellow: rgb(227, 197, 123);
+}
+body{
+	background-image: url(../content/img/back.png);
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+
+}
+/*
+Setting our fonts for overall use. */
+@font-face {
+  font-family: 'FuturaPT-Demi';
+  src: url('../content/font/FuturaPT-Demi.eot');
+  src: url('../content/font/FuturaPT-Demi.eot?#iefix') format('embedded-opentype'),
+       url('../content/font/FuturaPT-Demi.svg#FuturaPT-Demi') format('svg'),
+       url('../content/font/FuturaPT-Demi.ttf') format('truetype'),
+       url('../content/font/FuturaPT-Demi.woff') format('woff'),
+       url('../content/font/FuturaPT-Demi.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT-Book';
+  src: url('../content/font/FuturaPT-Book.eot');
+  src: url('../content/font/FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
+       url('../content/font/FuturaPT-Book.svg#FuturaPT-Book') format('svg'),
+       url('../content/font/FuturaPT-Book.ttf') format('truetype'),
+       url('../content/font/FuturaPT-Book.woff') format('woff'),
+       url('../content/font/FuturaPT-Book.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+/*
+Setting up main fonts on headings and paragrafs and also links.*/
+h1, h2, h3, h4, h5{
+	font-family: FuturaPT-Demi;
+	color: var(--black);
+}
+a, p, ul{
+	font-family: FuturaPT-Book;
+}
+
+/*
+Setting up buttons*/
+button {
+  background-color: var(--grey-25);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+button:hover {
+  background: var(--grey-50);
+  cursor: pointer;
+}
+
+/*
+Setting up form fields*/
 
 
+aside .search-container input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 170px;
+}
 
+aside .search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: var(--grey-25);
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
 
+aside .search-container button:hover {
+  background: var(--grey-50);
+}
+/*
+Setting up Newsletter*/
+aside .newsletter button{
+	width: 150px;
+	margin-left: calc(50% - 75px);
+}
 
+aside .newsletter input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 90%;
+  margin-left: 3%;
+  margin-bottom: 10px;
+  border: 1px solid var(--grey-50);
+}
 
+aside .follow img{
+	width: 35px;
+}
+
+aside .follow ul{
+	list-style: none;
+	font-size: 18pt;
+
+}
+aside a{
+	color: var(--grey-50);
+	text-decoration: none;
+}
+aside a:hover{
+	color: var(--black);
+}
+/*Canvas styling
+We are using a grid system to manage our body canvas, to set and design Nav, Header, Footer and Aside */
 #canvas {
     display: grid;
     width: calc(100% - 30px);
     height: 950px;
     grid-template-areas: "head head head"
     "nav  main aside"
-    "nav  foot foot";
-    grid-template-rows: 100px 1fr 150px;
+    "foot  foot foot";
+    grid-template-rows: 100px 1fr 200px;
     grid-template-columns: 300px auto 300px;
     grid-gap: 15px;
     padding: 0 15px;
+
 }
 
 #canvas > header {
@@ -27,47 +156,79 @@
 
 #canvas > nav {
     grid-area: nav;
-    width: 300px;
+    height: 500px;
     z-index: 1;
-    overflow-x: hidden;
+    background-color: white;
 }
 #canvas > nav > a{
 
     text-decoration: none;
     font-size: 24px;
     color: #818181;
-    display: block;
-    border: none;
-    background: none;
-    width: 100%;
-    text-align: left;
+    display: inline-block;
+    width: 80%;
     cursor: pointer;
     outline: none;
+    margin-left: 5px;
 }
 #canvas > nav > a:hover{
     color: blue;
-}
 
+}
+#canvas > nav > img{
+	width: 30px;
+	height: auto;
+	display: inline-block;
+}
 #canvas > main {
     grid-area: main;
-    background-color: #ffff64;
+    
 }
 
 #canvas > aside {
     grid-area: aside;
 }
+#canvas > aside .info img{
+	width: 80px;
+	height: auto;
+	float: right;
+}
 
 #canvas > footer {
     grid-area: foot;
-    background-color: #8cffa0;
-
+    background-color: var(--grey-50);
+    color: white;
     display: grid;
-    grid-template-columns: 250px 250px 250px;
+    grid-template-columns: repeat(5, 20%);
+    justify-content: center;
 }
+#canvas > footer > ul{
+	list-style: none;
+}
+
+
+
+
+
+/*Page Styling
+For styling our main page in the middle of our website.*/
+
+
+#page{
+	width: 100%;
+}
+
+#page > header{
+	width: 100%;
+	height: 215px;
+}
+
+
 .box{
     -webkit-box-shadow: 3px 0px 6px 0px rgba(0,0,0,0.16);
     -moz-box-shadow: 3px 0px 6px 0px rgba(0,0,0,0.16);
     box-shadow: 3px 0px 6px 0px rgba(0,0,0,0.16);
     margin-bottom: 10px;
-    padding: 5px;
+    padding: 15px;
+    background-color: white;
 }
