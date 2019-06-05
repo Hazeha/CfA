@@ -156,7 +156,7 @@ We are using a grid system to manage our body canvas, to set and design Nav, Hea
 
 #canvas > nav {
     grid-area: nav;
-    height: 650px;
+    height: 680px;
     z-index: 1;
     background-color: white;
 }
@@ -164,7 +164,7 @@ We are using a grid system to manage our body canvas, to set and design Nav, Hea
 
     text-decoration: none;
     font-size: 24px;
-    color: #818181;
+    color: var(--grey-50);
     display: inline-block;
     width: 80%;
     cursor: pointer;
@@ -172,12 +172,17 @@ We are using a grid system to manage our body canvas, to set and design Nav, Hea
     margin-left: 5px;
 }
 #canvas > nav > a:hover{
-    color: blue;
+    color: var(--orange);
 
 }
 #canvas > nav .dropdown-container > a{
 	text-decoration: none;
-
+	display: block;
+	font-size: 18pt;
+	color: var(--grey-25);
+}
+#canvas > nav .dropdown-container > a:hover{
+	color: var(--orange);
 }
 #canvas > nav > img{
 	width: 30px;
@@ -214,7 +219,7 @@ We are using a grid system to manage our body canvas, to set and design Nav, Hea
 .dropdown-container {
   display: none;
   padding-left: 20px;
-  font-size: 18pt;
+  
 }
 
 .box{
@@ -227,8 +232,7 @@ We are using a grid system to manage our body canvas, to set and design Nav, Hea
 }
 
 .active {
-  background-color: var(--grey-25);
-  color: white;
+  
 }
 
 
@@ -240,8 +244,19 @@ For styling our main page in the middle of our website.*/
 #indexPage{
 	display: grid;
 	grid-template-rows: repeat(3, 320px);
+	grid-gap: 30px;
 }
-
+#indexPage > section{
+	margin-top: 20px;
+}
+#indexPage > section img{
+	margin: 20px;
+}
+main header{
+	background-image: url(../content/img/header.jpg);
+	background-position: center;
+	background-size: cover;
+}
 
 #contentPage{
 	display: grid;
@@ -335,3 +350,6 @@ For styling our main page in the middle of our website.*/
   background-color: var(--grey-50);
 }
 
+.col-50{
+	width: 70%;
+}
