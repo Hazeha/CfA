@@ -156,7 +156,7 @@ We are using a grid system to manage our body canvas, to set and design Nav, Hea
 
 #canvas > nav {
     grid-area: nav;
-    height: 500px;
+    height: 650px;
     z-index: 1;
     background-color: white;
 }
@@ -173,6 +173,10 @@ We are using a grid system to manage our body canvas, to set and design Nav, Hea
 }
 #canvas > nav > a:hover{
     color: blue;
+
+}
+#canvas > nav .dropdown-container > a{
+	text-decoration: none;
 
 }
 #canvas > nav > img{
@@ -207,22 +211,11 @@ We are using a grid system to manage our body canvas, to set and design Nav, Hea
 }
 
 
-
-
-
-/*Page Styling
-For styling our main page in the middle of our website.*/
-
-
-#page{
-	width: 100%;
+.dropdown-container {
+  display: none;
+  padding-left: 20px;
+  font-size: 18pt;
 }
-
-#page > header{
-	width: 100%;
-	height: 215px;
-}
-
 
 .box{
     -webkit-box-shadow: 3px 0px 6px 0px rgba(0,0,0,0.16);
@@ -232,3 +225,113 @@ For styling our main page in the middle of our website.*/
     padding: 15px;
     background-color: white;
 }
+
+.active {
+  background-color: var(--grey-25);
+  color: white;
+}
+
+
+
+
+
+/*Page Styling
+For styling our main page in the middle of our website.*/
+#indexPage{
+	display: grid;
+	grid-template-rows: repeat(3, 320px);
+}
+
+
+#contentPage{
+	display: grid;
+	grid-template-columns: 80% 20%;
+	grid-template-rows: 220px 180px 200px 60px 60px 60px;
+}
+#contentPage > header{
+	grid-column: 1 / span 2;
+	grid-row: 1;
+	background-color: var(--black);
+}
+#contantPage .sideInfo{
+	grid-column: 2;
+	grid-row: 2;
+	
+}
+#contentPage .frontInfo{
+	grid-column: 1;
+	grid-row: 2;
+
+}
+#contentPage .linkArt{
+	grid-column: 1 / span 3;
+	grid-row: 3;
+	background-color: grey;
+}
+
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+
+#mainPage{
+
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#subPage{
+
+}
+
+#mainInfo{
+	float: right; width: 300px; padding: 5px; margin-left: 50px; border: 1px solid var(--grey-25);
+}
+
+.links{
+	width: 55%;
+}
+
+#descSection > article{
+
+}
+
+#descSection > article a{
+
+	text-decoration: none;
+	font-family: FuturaPT-Demi;
+	color: var(--grey-50);
+}
+
+#requestForm{
+	width: 60%;
+}
+#requestForm input[type=text], select, textarea {
+  width: 45%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin: 5px;
+}
+#requestForm textarea{
+	float: right;
+}
+#requestForm input[type=submit] {
+  background-color: var(--grey-25);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+#requestForm input[type=submit]:hover {
+  background-color: var(--grey-50);
+}
+

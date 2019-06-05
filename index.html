@@ -25,16 +25,55 @@
 
 
 
-	<main id="contentPage" class="box">
+	<main id="indexPage" class="box">
     
 
     <header>
     	header
     </header>
-    <section class="frontInfo">section</section>
-    <section class="sideInfo">Side</section>
-    <section class="linkArt">section</section>
-    
+
+    <section>
+        <img src="content/icon/f-logo.png" class="right" style="width: 40%; height: 200px;">
+        <h2>Når Diagnosen Er Ny</h2>
+
+        <p>At få stillet diagnosen autismespektrumsforstyrrelse kan være uoverskueligt for både den berørte borger, såvel som for de pårørende."Når diagnosen er ny" giver en kort præsentation af autismespektrums-
+        forstyrrelse som diagnose, samt rådgivning til det videre forløb.</p>
+        <button class="moreBtn" type="submit">Se Mere</button>
+    </section>
+
+    <section>
+        <img src="content/icon/f-logo.png" class="left" style="width: 40%; height: 200px;">
+        <h2>Vi Tilbyder...</h2>
+
+        <p>Vi tilbyder en række forskellige services til borgere med ASF.
+            <ul>
+                <li>Særligt Tilrettelagt Ungdomsuddannelse (STU).</li>
+                <li>Erhvervs Mentor til at komme under beskæftigelse.</li>
+                <li>Terapi i forskellige former som f.eks. Musik Terapi.</li>
+            </ul>
+        </p>
+        <button type="submit">Se Mere</button>
+    </section>
+    <section>
+        <img src="content/icon/f-logo.png" class="right" style="width: 40%; height: 200px;">
+        <h2>Nyt Mediecenter hos CFA</h2>
+
+        <p>Center for Autisme har endelig åbnet sit medieværksted hvor der er plads til alle. 
+            Om du har en stor kunstnerisk lidenskab eller elsker at leje med farver mm. Så er medieværkstedet noget for dig.
+            Vi tilbyder rolige og kreative timer, for at udvikle og forbedre det farverige syn på verden. .</p>
+            <button type="submit">Se Mere</button>
+    </section>
+
+    <section>
+        <img src="content/icon/f-logo.png" class="left" style="width: 40%; height: 200px;">
+        <h2>Det siger forskerne</h2>
+
+        <p>Her kan du læse en række faglige artikler skrevet af ansatte på Center for Autisme, bøger udgivet på eget forlag, rapporter og brochurer inden for autismeområdet.
+
+Du kan læse mere på vores side for forskere. 
+        </p>
+        <button type="submit">Se Mere</button>
+    </section>
     </main>
 
 
@@ -56,34 +95,34 @@
             <img src="content/icon/ikon-uddbob.png">
             <a href="#" class="dropdown-btn">UDDANNELSE</a>
             <div class="dropdown-container">
-    			<a href="#">Ungdomsuddannelse</a>
-    			<a href="#">Erhvervsuddannelse</a>
-    			<a href="#">Ansøgningblanket</a>
-  			</div>
+                <a href="#">Ungdomsuddannelse</a>
+                <a href="#">Erhvervsuddannelse</a>
+                <a href="#">Ansøgningblanket</a>
+            </div>
 
             <img src="content/icon/ikon-uddbob.png">
             <a href="#" class="dropdown-btn">BESKÆFTIGELSE</a>
 
             <div class="dropdown-container">
-    			<a href="#">Arbjedsevneafklaring</a>
-    			<a href="#">Erhvervsforløb</a>
-    			<a href="#">Beskyttet Beskæftigeelse</a>
-    			<a href="#">Dag Aktivitets Tilbud</a>
-  			</div>
+                <a href="#">Arbjedsevneafklaring</a>
+                <a href="#">Erhvervsforløb</a>
+                <a href="#">Beskyttet Beskæftigeelse</a>
+                <a href="#">Dag Aktivitets Tilbud</a>
+            </div>
             <img src="content/icon/ikon-netvAlt.png">
             <a href="#">NETVÆRKSGRUPPER</a>
             <img src="content/icon/ikon-helpBob.png">
             <a href="#" class="dropdown-btn">RÅDGIVNING</a>
              <div class="dropdown-container">
-    			<a href="#">Special pedagogisk stæøtte</a>
-    			<a href="#">hjemmevejledning</a>
-  			</div>
+                <a href="#">Special pedagogisk stæøtte</a>
+                <a href="#">hjemmevejledning</a>
+            </div>
             <img src="content/icon/ikon-helpBob.png">
             <a href="#">BEHANDLING</a>
              <div class="dropdown-container">
-    			<a href="#">Udredning</a>
-    			<a href="#">Angst, OCd & ASF</a>
-  			</div>
+                <a href="#">Udredning</a>
+                <a href="#">Angst, OCd & ASF</a>
+            </div>
             <img src="content/icon/ikon-VidenBob.png">
             <a href="#">UNDERVISNING</a>
             <img src="content/icon/ikon-VidenBob.png">
@@ -206,10 +245,7 @@
         </section>
     </footer>
 
-
-
-
-    <script>
+        <script>
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var i;
